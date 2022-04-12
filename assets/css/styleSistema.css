@@ -1,0 +1,11 @@
+body{
+    background: linear-gradient(to right, #00356D, rgba(0, 68, 255, 0.548));
+    color: white;
+    text-align: center;
+}
+
+.table-striped {
+    background: rgb(209, 209, 209);
+    border-radius: 15px 15px 0 0;
+}
+
