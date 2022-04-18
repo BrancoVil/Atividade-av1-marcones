@@ -9,8 +9,9 @@ require('FPDF/fpdf.php');
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',24);
-$pdf->Cell(192,30,'RELATORIO',1,1,'C');
-$pdf->SetFont('Arial','',10);
+$pdf->Cell(192,30,'RELATÓRIO',1,1,'C');
+$pdf->SetFont('Arial','B',10);
+$pdf->ln();
 $pdf->Cell(16,10,'#',1,0,'C');
 $pdf->Cell(25,10,'Coordenador',1,0,'C');
 $pdf->Cell(25,10,'Setor',1,0,'C');
@@ -22,6 +23,7 @@ $pdf->Cell(26,10,'Data de Visita',1,0,'C');
 
 while ($resultado = mysqli_fetch_array($result)) {
     $pdf->ln();
+    $pdf->SetFont('Arial','',10);
     $pdf->Cell(16, 10,$resultado['id'],1, 0,'C');
     $pdf->Cell(25, 10,$resultado['coordenador'],1, 0,'C');
     $pdf->Cell(25, 10, $resultado['setor'],1, 0,'C');
